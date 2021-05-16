@@ -5,7 +5,7 @@ export function Footer() {
         <footer className="footer">
             <div className="footer-info">
                 <span className='footer-copy'>© {new Date().getFullYear()} Copy text</span>
-                <a className="footer-href" href="#!">repo</a>
+                <a className="footer-href" href="https://github.com/Viktor-libr/react-shop">repo</a>
             </div>
         </footer>
     )
