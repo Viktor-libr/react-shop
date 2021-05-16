@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Project React Shop App: 
 
-Project React Shop App: [Demo](https://viktor-libr.github.io/react-shop/).
+[Demo](https://viktor-libr.github.io/react-shop/).
