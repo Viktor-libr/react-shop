@@ -2,14 +2,17 @@ import React from 'react';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Shop } from './components/Shop';
+import { ContextProvider } from './context';
 
-function App () {
-  
+function App() {
+
     return (
         <>
-        <Header />
-        <Shop />
-        <Footer />
+            <Header />
+            <ContextProvider>
+                <Shop />
+            </ContextProvider>
+            <Footer />
         </>
     )
 };

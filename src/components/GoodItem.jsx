@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ContextShop } from '../context';
 
 export function GoodItem(props) {
     const {
@@ -7,8 +8,9 @@ export function GoodItem(props) {
         displayDescription,
         displayAssets:[{full_background}],
         price:{regularPrice},
-        handleOrder = Function.prototype,
     } = props;
+
+    const {handleOrder} = useContext(ContextShop);
 
 
     return (

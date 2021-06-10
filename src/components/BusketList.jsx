@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ContextShop } from '../context';
 import { BusketItem } from './BusketItem';
 
-function BusketList(props) {
-    const { order, handleVisibleBusket, deleteOrder = Function.prototype, handleQuantity = Function.prototype } = props;
+function BusketList() {
+    const { order, handleVisibleBusket} = useContext(ContextShop);
     const summaryPrise = order.reduce((sum, el) => {
         return sum + el.prise * el.quantity;
     }, 0);
@@ -16,7 +17,7 @@ function BusketList(props) {
             </li>
 
             {order.length ? order.map((e) => (
-                <BusketItem key={e.id} {...e} handleQuantity={handleQuantity} deleteOrder={deleteOrder} />)
+                <BusketItem key={e.id} {...e} />)
             ) :
                 <li className="collection-item">Корзина пуста</li>}
 

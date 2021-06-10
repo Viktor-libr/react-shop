@@ -1,23 +1,24 @@
+import {useContext} from 'react';
+import {ContextShop} from '../context';
+
 function BusketItem(props) {
     const { name,
             quantity,
             prise,
-            id,
-            deleteOrder = Function.prototype,
-            handleQuantity = Function.prototype } = props;
+            id } = props;
+            
+            const {deleteOrder, handleQuantity} = useContext(ContextShop)
             
     return (
         <li className="collection-item item-collection">
             {name}:
-            <span className='item-collection-arrow'>
                 <i className="material-icons close-busket" onClick={() => handleQuantity(id, "minus")}>
-                    arrow_back</i>
+                remove</i>
                 <i className="collection-arrow">{quantity}</i> <i className="material-icons close-busket" onClick={() => handleQuantity(id, "plus")}>
-                    arrow_forward</i>
-            </span>
+                add</i>
             : {prise * quantity}
-            <span className="secondary-content close-busket">
-                <i className="material-icons close-busket" onClick={() => deleteOrder(id)}>
+            <span className="secondary-content close-busket delete-busket-item">
+                <i className="material-icons close-busket close-busket-item" onClick={() => deleteOrder(id)}>
                     delete_forever</i>
             </span>
         </li>

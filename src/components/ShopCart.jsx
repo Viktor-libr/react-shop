@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ContextShop } from '../context';
 
 function ShopCart (props) {
-    const {quantity = 0, handleVisibleBusket = Function.prototype} = props;
+    const {order, handleVisibleBusket } = useContext(ContextShop);
+    const quantity = order.length;
 
     return(
         <div className='cart green lighten-4' onClick={handleVisibleBusket}>

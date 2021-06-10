@@ -130,6 +130,12 @@ nav {
 .close-busket {
   cursor: pointer;
 }
+.close-busket-item{
+  float: right;
+}
+.delete-busket-item {
+  flex-grow: 1;
+}
 
 .summary-prise {
   background-color: rgb(111, 201, 116);
@@ -145,14 +151,12 @@ nav {
   border-bottom: 2px solid black;
 }
 
-/* .item-collection {
+.item-collection {
   display: flex;
-  justify-content: space-between;
+flex-direction: row;
+align-items: center;
 }
 
-.item-collection-arrow {
-  display: flex;
-} */
 
 .collection-arrow {
   padding: 0 0.5rem;
